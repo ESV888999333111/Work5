@@ -18,16 +18,19 @@ public class LongestWord {
         String line = in.nextLine(); // введем предложение
         String[] lineMass = line.split(" ");// преобразуем предложенние в массив
         System.out.println(Arrays.toString(lineMass));
-
-        String[] wordMass;
-        for (int i = 0, ii =0, len =0; i < lineMass.length; i += 1) {
+        String[] wordMass = lineMass[0].split("");
+        int ii = 0, len = wordMass.length, max;
+        for (int i = 0; i < lineMass.length; i += 1) {
             wordMass = lineMass[i].split(""); // преобразуем каждое слово в массив букв
             System.out.println(Arrays.toString(wordMass));
             if (wordMass.length > len) {
-                len = wordMass.length;
-                ii = i;
+                len = wordMass.length; // запоминаем длину
+                ii = i; // запоминаем регистр
             }
+
         }
+        System.out.println("Самое длинное слово: " + (lineMass[ii]));
+        System.out.println("Количество букв: " + len + ", регистр: " + ii);
     }
 }
 
