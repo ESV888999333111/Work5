@@ -12,5 +12,6 @@ public class Polyndrom {
         System.out.println("++++" + revPoly);
         if (revPoly.equals(poly)) System.out.println("Выраежение: " + poly + " - полиндром");
         else System.out.println("Выражение: " + poly + " - не полиндром");
+
     }
 }
